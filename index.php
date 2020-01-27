@@ -1,6 +1,6 @@
 <?php
 
-/*verison 2*/
+/*verison 3*/
     include_once('class/config.php');
     include_once('class/google.php');
     $google = new Google;
