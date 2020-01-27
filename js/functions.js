@@ -7,7 +7,7 @@ var directionsService = new google.maps.DirectionsService();
 function start_map(){
     map = new google.maps.Map(document.getElementById('map'),{
         center: {lat: america_lat, lng: america_lng},
-        zoom:4
+        zoom: 4
     });
 }
 
@@ -51,7 +51,7 @@ function draw_rute_map(lat, lng){
         var request = {
             origin: start,
             destination: end,
-            travelMode: google.maps.travelMode.DRIVING
+            travelMode: google.maps.TravelMode.DRIVING
         };
         DirectionsService.route(request, function(response, status){
             if(status == google.maps.DirectionsStatus.OK){
