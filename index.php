@@ -12,16 +12,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Google Maps - Rutas</title>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+    <link rel="stylesheet" type="text/css" href="<?=BASE_URL?>/css/base.css">
+    <!--<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBas0CM1zHF2OHiy7ZigLCWQjz3vBSBhYQ&callback=iniciarMap"></script>-->
 
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyC-dFHYjTqEVLndbN2gdvXsx09jfJHmNc8&callback=initMap"></script>
     <script type="text/javascript" src="<?=BASE_URL?>/js/jquery.js"></script>
     <script type="text/javascript" src="<?=BASE_URL?>/js/functions.js"></script>
 
-  
 </head>
 </head>
 <body>
-
     <div class="container">
         <table class="table-elements">
         <tr>

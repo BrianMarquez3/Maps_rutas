@@ -8,7 +8,7 @@ class Google extends Model{
 
 
     public function get_lat_lng($value){
-        $sql =$this->db->query("SELECT tienda_latitud, tienda_longitud FROM tbl_tienda WHERE tienda_id ='$value'
+        $sql = $this->db->query("SELECT tienda_latitud, tienda_longitud FROM tbl_tienda WHERE tienda_id ='$value'
         LIMIT 1");
         $lat = 0;
         $lng = 0;
