@@ -1,16 +1,16 @@
 var map;
 var america_lat = -17.6680839;
 var america_lng = -71.34680909999;
-var DirectionsDisplay = new google.maps.DirectionRenderer({polylineOptions:{strokeColor:'#2E9AFE'}});
-var DirectionsService = new google.maps.DirectionsService();
+var directionsDisplay = new google.maps.DirectionsRenderer({polylineOptions:{strokeColor:'#2E9AFE'}});
+var directionsService = new google.maps.DirectionsService();
 
 function start_map(){
-    map = new google.maps(document.getElementById('map'),{
+    map = new google.maps.Map(document.getElementById('map'),{
         center: {lat: america_lat, lng: america_lng},
         zoom:4
     });
 }
-/*HOLA*/
+
 function get_my_location(){
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(function(position){
@@ -29,6 +29,7 @@ function get_my_location(){
       });
     }
 }
+
 function draw_rute(value){
     if(value > 0){
         $.ajax({
@@ -46,7 +47,7 @@ function draw_rute_map(lat, lng){
     var my_lat =$('#my_lat').val();
     var my_lng =$('#my_lng').val();
         var start = new google.maps.LatLng(my_lat, my_lng);
-        var end =new google.maps.LatLng(lat, lng);
+        var end = new google.maps.LatLng(lat, lng);
         var request = {
             origin: start,
             destination: end,

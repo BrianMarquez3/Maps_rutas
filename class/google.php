@@ -3,12 +3,12 @@ include_once('conexion.php');
 class Google extends Model{
 
     public function __construct(){
-        parent:: __construct();
+        parent::__construct();
     }
 
 
     public function get_lat_lng($value){
-        $sql =$this->query("SELECT tienda_latitud, tienda_longitud FROM tbl_tienda WHERE tienda_id ='$value'
+        $sql =$this->db->query("SELECT tienda_latitud, tienda_longitud FROM tbl_tienda WHERE tienda_id ='$value'
         LIMIT 1");
         $lat = 0;
         $lng = 0;
@@ -35,7 +35,7 @@ class Google extends Model{
 if(isset($_POST['value'])){
     $class = new Google;
     $run = $class->get_lat_lng($_POST['value']);
-    exit(json_encoder($run));
+    exit(json_encode($run));
 }
 
 ?>
