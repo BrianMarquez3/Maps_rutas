@@ -1,5 +1,5 @@
 <?php
-/*verison 4*/
+/*verison 5*/
     include_once('class/config.php');
     include_once('class/google.php');
     $google = new Google;
